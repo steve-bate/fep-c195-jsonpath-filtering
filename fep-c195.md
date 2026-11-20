@@ -3,9 +3,8 @@ slug: "c195"
 type: implementation
 authors: Steve Bate <svc-fep@stevebate.net>
 status: DRAFT
-discussionsTo: https://codeberg.org/steve-bate/fep/issues
+discussionsTo: https://github.com/steve-bate/fep-c195-jsonpath-filtering/issues
 dateReceived: 2026-03-17
-trackingIssue: https://codeberg.org/fediverse/fep/issues/790
 ---
 # FEP-c195: JSONPath Filtering for ActivityPub Collection Retrieval
 
@@ -68,7 +67,7 @@ The item filter has two variations:
 | Case | Description |
 |----|-----|
 | No leading `[` | The expression will be wrapped in `[` and `]` |
-| Leading `[` | Used as-is for the item filter expresssion |
+| Leading `[` | Used as-is for the item filter expression |
 
 **Example**
 
@@ -76,7 +75,7 @@ The item filter has two variations:
 
 becomes 
 
-`$[?@type == 'Create']`
+`$[?@.type == 'Create']`
 
 (for an `OrderedCollection`, otherwise `items` will be used)
 
@@ -88,7 +87,7 @@ For filtering with additional features like projection, the query should start w
 
 becomes 
 
-`$[?@.object[*].attachment[?@.type == 'Video']].id]`
+`$[?@.object[*].attachment[?@.type == 'Video']].id`
 
 
 ### Query Results
@@ -160,15 +159,15 @@ Implementations MAY include parser or feature details in a problem response body
 
 ## Related FEPs
 
-### [FEP-34c1](https://codeberg.org/fediverse/fep/src/branch/main/fep/34c1/fep-34c1.md): Collection Filtering using TREE Hypermedia Vocabulary
+### [FEP-34c1](https://w3id.org/fep/34c1): Collection Filtering using TREE Hypermedia Vocabulary
 
 This FEP is similar in intent but more oriented to RDF and Linked Data use cases.
 
-### [FEP-6606](https://codeberg.org/fediverse/fep/src/branch/main/fep/6606/fep-6606.md): ActivityPub client to server collections addressing conventions
+### [FEP-6606](https://w3id.org/fep/6606): ActivityPub client to server collections addressing conventions
 
 A simpler, but less powerful, filtering language based on a URL query parameter-based language defined in the FEP. The "fuzzy" matching is not well-defined (seems to be substring match) and it appears to not be able to handle conjunctions.
 
-### [FEP-bad1](https://codeberg.org/fediverse/fep/src/branch/main/fep/bad1/fep-bad1.md): Object history collection
+### [FEP-bad1](https://w3id.org/fep/bad1): Object history collection
 
 Filtering some collections (e.g., inbox and outbox) can provide similar historical results for a given object without the need for explicit history collections.
 
