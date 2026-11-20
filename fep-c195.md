@@ -4,7 +4,6 @@ type: implementation
 authors: Steve Bate <svc-fep@stevebate.net>
 status: DRAFT
 discussionsTo: https://github.com/steve-bate/fep-c195-jsonpath-filtering/issues
-dateReceived: 2026-03-17
 ---
 # FEP-c195: JSONPath Filtering for ActivityPub Collection Retrieval
 
