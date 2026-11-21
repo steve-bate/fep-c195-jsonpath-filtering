@@ -1,6 +1,6 @@
 # FEP-c195: JSONPath Filtering for ActivityPub Collection Retrieval
 
-**Status:** DRAFT · **Type:** implementation · **Author:** Steve Bate · **Received:** 2026-03-17
+**Status:** DRAFT · **Type:** implementation · **Author:** Steve Bate
 
 ## Overview
 
